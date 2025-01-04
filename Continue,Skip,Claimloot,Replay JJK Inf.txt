@@ -1,0 +1,38 @@
+-- Continue -- 
+local Continue = game:GetService("Players").LocalPlayer.PlayerGui.Results.Frame.Continue
+if Continue.Visible then
+game:GetService("GuiService").SelectedObject = Continue
+game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+task.wait(0.05)
+game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+end
+
+-- Replay --
+
+local Replay = game:GetService("Players").LocalPlayer.PlayerGui.ReadyScreen.Frame.Replay
+if Replay.Visible then
+game:GetService("GuiService").SelectedObject = Replay
+game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+task.wait(0.05)
+game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+end
+
+-- Claim Loot --
+
+local Flip = game:GetService("Players").LocalPlayer.PlayerGui.Loot.Frame.Flip
+while Flip.Visible do
+game:GetService("GuiService").SelectedObject = Flip
+game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+task.wait(0.05)
+game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+end
+
+-- Skip Button --
+
+local Skip = game:GetService("Players").LocalPlayer.PlayerGui.StorylineDialogue.Frame.Dialogue.Skip
+if Skip.Visible then
+game:GetService("GuiService").SelectedObject = Skip
+game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+task.wait(0.05)
+game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+end

@@ -1,0 +1,24 @@
+local function insertBoolValues(path)
+    -- Create table of ID and value pairs
+    local boolValues = {
+        ["77102481"] = true,
+        ["77102528"] = true,
+        ["77102969"] = true,
+        ["77103194"] = true,
+        ["77103458"] = true,
+        ["77110710"] = true,
+        ["259500454"] = true
+    }
+    
+
+    for id, value in pairs(boolValues) do
+        local boolValue = Instance.new("BoolValue")
+        boolValue.Name = id
+        boolValue.Value = value
+        boolValue.Parent = path
+    end
+end
+
+
+local path = game:GetService("Players").LocalPlayer.ReplicatedData.gamepasses
+insertBoolValues(path)
